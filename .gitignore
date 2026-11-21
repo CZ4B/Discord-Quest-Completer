@@ -1,0 +1,71 @@
+# Rust build output and profiling data
+target/
+**/*.rs.bk
+*.rlib
+*.rmeta
+*.profraw
+*.profdata
+/coverage/
+/lcov.info
+
+# Executables, libraries, and linker output
+*.exe
+*.exe.*
+*.dll
+*.pdb
+*.obj
+*.o
+*.ilk
+*.exp
+*.lib
+
+# Generated release packages
+/dist/
+/artifacts/
+
+# Runtime directories if TEMP/TMP or LOCALAPPDATA points to the project
+/discord-quest-*/
+/DiscordQuestCompleter/cache/
+
+# Legacy runtime files, caches, and logs
+/fake_games/
+dqc.config
+/games_cache.temp
+/.cache/
+/cache/
+/logs/
+*.log
+
+# Temporary files and backups
+/tmp/
+/temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+*~
+
+# Editor and machine-specific settings
+.vs/
+.idea/
+.vscode/
+.history/
+*.code-workspace
+*.user
+*.suo
+
+# Local environment and Cargo credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+/.cargo
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Keep Cargo.lock, .cargo/config.toml, gamelist.json, source, tests, and assets versioned.

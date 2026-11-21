@@ -1,0 +1,6 @@
+# Used by GitHub's automatically generated release notes.
+changelog:
+  categories:
+    - title: "What's Changed"
+      labels:
+        - "*"

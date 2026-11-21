@@ -1,0 +1,17 @@
+[
+  {
+    "id": "dqc-ui-test",
+    "name": "Interface Test Game",
+    "executables": [
+      { "os": "win32", "name": "bin/a/dqc-ui-test.exe" },
+      { "os": "win32", "name": "bin/b/dqc-ui-test.exe" }
+    ]
+  },
+  {
+    "id": "dqc-ui-test-two",
+    "name": "Interface Test Game Two",
+    "executables": [
+      { "os": "win32", "name": "bin/dqc-ui-test-two.exe" }
+    ]
+  }
+]

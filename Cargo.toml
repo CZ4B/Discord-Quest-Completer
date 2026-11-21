@@ -1,0 +1,40 @@
+[package]
+name = "discord-quest-completer"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Discord Quest Completer desktop application"
+repository = "https://github.com/CZ4B/Discord-Quest-Completer"
+license = "MIT"
+build = "build.rs"
+
+[dependencies]
+anyhow = "1"
+eframe = { version = "0.33.3", default-features = false, features = ["default_fonts", "glow"] }
+image = { version = "0.25", default-features = false, features = ["ico", "png"] }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "native-tls"] }
+semver = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tempfile = "3"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = ["Win32_Foundation", "Win32_Security", "Win32_System_JobObjects", "Win32_System_Threading", "Win32_UI_WindowsAndMessaging"] }
+
+[build-dependencies]
+semver = "1"
+winresource = "0.1"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
+
+[[bin]]
+name = "DiscordQuestCompleter"
+path = "src/main.rs"
+
+[[test]]
+name = "process_lifecycle"
+path = "tests/process_lifecycle.rs"
+harness = false
