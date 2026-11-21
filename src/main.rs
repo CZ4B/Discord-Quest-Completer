@@ -113,7 +113,9 @@ fn run() -> Result<()> {
     }
     let native_options = eframe::NativeOptions {
         viewport,
-        renderer: eframe::Renderer::Glow,
+        // WGPU uses DirectX on Windows, avoiding an OpenGL requirement on older
+        // drivers, Remote Desktop sessions, and virtual machines.
+        renderer: eframe::Renderer::Wgpu,
         centered: true,
         ..Default::default()
     };
